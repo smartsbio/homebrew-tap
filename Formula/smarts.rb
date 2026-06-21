@@ -1,25 +1,25 @@
 class Smarts < Formula
   desc "smarts.bio command-line interface"
   homepage "https://smarts.bio"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.3/smarts-aarch64-apple-darwin.tar.xz"
-      sha256 "607e52a79066c75f6a222321e2bc1e839addf02df55b8e3835b428b83d5d83d3"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.4/smarts-aarch64-apple-darwin.tar.xz"
+      sha256 "caa670c00a4cacf3444417d63c451b6eb82fd20e07facc240c349291f66a8c07"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.3/smarts-x86_64-apple-darwin.tar.xz"
-      sha256 "8325cddb81649e3fb77ce9609bc675f4126a250f6233052cbcd5af3f4d627643"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.4/smarts-x86_64-apple-darwin.tar.xz"
+      sha256 "01b18d608e8d4935327e0ae07508c8bb018df760e71182cca8ccbc2794aa3dba"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.3/smarts-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8af2f315a7132ea0419fccfb7b30b84212b4eae94d03de7c97eea81492fa65f3"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.4/smarts-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ba8fcc26b6088171f4a6940bac1519ae3f4f411f2e198f16ff4317e81217cc49"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.3/smarts-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "acf22840d6bd7e40a946b657e53e694af284ccee8db91d0859f295ae6f3c8b5c"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.4/smarts-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2ef573c36a60f22e8e07425cdd105816244bbbc2a0e1d50913082a371f90f29e"
     end
   end
   license "MIT"
