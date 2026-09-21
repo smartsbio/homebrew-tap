@@ -1,25 +1,25 @@
 class Smarts < Formula
   desc "smarts.bio command-line interface"
   homepage "https://smarts.bio"
-  version "0.1.12"
+  version "0.1.13"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.12/smarts-aarch64-apple-darwin.tar.xz"
-      sha256 "1be8f8b4f4b832daa89124a30d122f8193e74e28fb92e8701b7ae9c4f6d27d0d"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.13/smarts-aarch64-apple-darwin.tar.xz"
+      sha256 "f3d6c7d8f1a5474b386cf0c196094cfa31b4de2144031fc739c16b5391611b1c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.12/smarts-x86_64-apple-darwin.tar.xz"
-      sha256 "b947fa5c5fb1e815e94ff524894313c4d7b341103b7df90ecb7eac4ae9459676"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.13/smarts-x86_64-apple-darwin.tar.xz"
+      sha256 "ba31b4be07e5c19121b9068e959edf0be212325368ea0a86fa06856c368d5d4d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.12/smarts-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ebdc51965c703f482249ee4e82ac0b33e4f4dcb11a7f330c96df5a194851d198"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.13/smarts-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "020ac3ad68ca01a1dee6ae2e5381771eb62aa07a311b02aedcd697d8f168232e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.12/smarts-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "63fcc3f4d78a249646c8c4c8dfedaf4c6f97c4bd0ceb318cb89a9fb19f375926"
+      url "https://github.com/smartsbio/smarts-bio-cli/releases/download/v0.1.13/smarts-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "69a7d666abe223739ea684b225591516e8cfd602fa4b41d23f9fd2e3e045399d"
     end
   end
   license "MIT"
@@ -50,10 +50,18 @@ class Smarts < Formula
   end
 
   def install
-    bin.install "smarts" if OS.mac? && Hardware::CPU.arm?
-    bin.install "smarts" if OS.mac? && Hardware::CPU.intel?
-    bin.install "smarts" if OS.linux? && Hardware::CPU.arm?
-    bin.install "smarts" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "smarts"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "smarts"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "smarts"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "smarts"
+    end
 
     install_binary_aliases!
 
